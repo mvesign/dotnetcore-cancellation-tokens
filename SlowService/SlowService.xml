@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SlowService</name>
+    </assembly>
+    <members>
+        <member name="T:SlowService.Controllers.SlowController">
+            <inheritdoc />
+        </member>
+        <member name="M:SlowService.Controllers.SlowController.#ctor(Microsoft.Extensions.Logging.ILogger{SlowService.Controllers.SlowController})">
+            <summary>
+            Create an instance of the SlowCancel controller.
+            </summary>
+            <param name="logger">Details of the logger.</param>
+        </member>
+        <member name="M:SlowService.Controllers.SlowController.Get">
+            <summary>
+            Perform a slow GET request.
+            </summary>
+            <returns>Message with the execution time.</returns>
+        </member>
+        <member name="M:SlowService.Controllers.SlowController.GetWithCancellationAsync(System.Threading.CancellationToken)">
+            <summary>
+            Perform a slow GET request with a cancellation token.
+            </summary>
+            <param name="cancellationToken">Details of the cancellation token.</param>
+            <returns>Message with the execution time.</returns>
+        </member>
+        <member name="M:SlowService.Controllers.SlowController.GetWithCancellationExceptionAsync(System.Threading.CancellationToken)">
+            <summary>
+            Perform a slow GET request with a cancellation token that throws an OperationCancelledException exception.
+            </summary>
+            <param name="cancellationToken">Details of the cancellation token.</param>
+            <returns>Message with the execution time.</returns>
+        </member>
+        <member name="M:SlowService.Controllers.SlowController.GetWithCheckCancellationAsync(System.Threading.CancellationToken)">
+            <summary>
+            Perform a slow GET request with a cancellation token that is checked.
+            </summary>
+            <param name="cancellationToken">Details of the cancellation token.</param>
+            <returns>Message with the execution time.</returns>
+        </member>
+        <member name="T:SlowService.Filters.OperationCancelledExceptionFilter">
+            <inheritdoc />
+        </member>
+        <member name="M:SlowService.Filters.OperationCancelledExceptionFilter.#ctor(Microsoft.Extensions.Logging.ILoggerFactory)">
+            <inheritdoc />
+        </member>
+        <member name="M:SlowService.Filters.OperationCancelledExceptionFilter.OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <inheritdoc />
+        </member>
+        <member name="T:SlowService.Program">
+            <summary>
+            Main class for the web API.
+            </summary>
+        </member>
+        <member name="M:SlowService.Program.Main(System.String[])">
+            <summary>
+            Main entry point of the web API.
+            </summary>
+            <param name="args">List of starting arguments.</param>
+        </member>
+        <member name="M:SlowService.Program.CreateWebHost(System.String[])">
+            <summary>
+            Build the web host.
+            </summary>
+            <param name="args">List of starting arguments.</param>
+            <returns>Details of the web host.</returns>
+        </member>
+        <member name="T:SlowService.Startup">
+            <summary>
+            Class containing details of the start-up for the web API.
+            </summary>
+        </member>
+        <member name="M:SlowService.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Create an instance to start-up the web API.
+            </summary>
+            <param name="configuration">Details of the web API configuration settings.</param>
+        </member>
+        <member name="P:SlowService.Startup.Configuration">
+            <summary>
+            Details of the web API configuration settings.
+            </summary>
+        </member>
+        <member name="M:SlowService.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configure services for the web API.
+            </summary>
+            <param name="services">Details of the existing services.</param>
+        </member>
+        <member name="M:SlowService.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            Configure the web API.
+            </summary>
+            <param name="application">Details of the application builder.</param>
+            <param name="environment">Details of the hosting environment.</param>
+        </member>
+    </members>
+</doc>
