@@ -1,25 +1,3 @@
-# Slow Service
-Small web application created to demo the CancellationTokens in dotnetcore. 
-
-### How to use this solution
-
-###### 1. Open solution in Visual Studio
-```PowerShell
-devenv.eve SlowService.sln
-```
-
-###### 2. Build solutions
-```
-[F6] / [Ctrl]-[Shift]-[B]
-```
-
-###### 3. Run web application
-```
-[F5]
-```
-
-### Perform requests
-
 The idea of this project is to perform one request twice. When the second request is performed, the first request is cancelled due to the usaged of CancellationTokens.
 
 ###### 1. Perform a slow GET request.
